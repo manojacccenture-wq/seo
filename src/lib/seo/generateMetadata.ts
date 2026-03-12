@@ -1,4 +1,5 @@
 import { siteConfig } from "./seo.config"
+import { Metadata } from "next"
 
 type SEOProps = {
   title: string
@@ -14,9 +15,10 @@ export function generateSEO({
   path = "",
   image = "/og-image.png",
   keywords
-}: SEOProps) {
+}: SEOProps): Metadata {
 
   const url = `${siteConfig.siteUrl}${path}`
+  const imageUrl = `${siteConfig.siteUrl}${image}`
 
   return {
     title: `${title} | ${siteConfig.siteName}`,
@@ -30,9 +32,10 @@ export function generateSEO({
       siteName: siteConfig.siteName,
       images: [
         {
-          url: image,
+          url: imageUrl,
           width: 1200,
-          height: 630
+          height: 630,
+          alt: title
         }
       ],
       locale: "en_US",
@@ -43,7 +46,7 @@ export function generateSEO({
       card: "summary_large_image",
       title,
       description,
-      images: [image]
+      images: [imageUrl]
     },
 
     alternates: {
