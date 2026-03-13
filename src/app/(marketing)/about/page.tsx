@@ -1,4 +1,5 @@
-import { generateSEO } from "@/src/lib/seo/generateMetadata"
+import { generateSEO } from "../../../lib/seo/generateMetadata"
+
 
 
 export const metadata = generateSEO({
@@ -6,6 +7,7 @@ export const metadata = generateSEO({
   description: "Learn about our enterprise technology solutions and global expertise.",
   path: "/about"
 })
+
 
 export default function AboutPage() {
   return <div>About Page</div>

@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Container from "../ui/Container"
 
-export default function Navbar(){
-  return(
+export default function Navbar() {
+  return (
     <header className="border-b">
       <Container>
         <div className="flex items-center justify-between py-4">
@@ -13,6 +13,7 @@ export default function Navbar(){
 
           <nav className="flex gap-6 text-sm text-gray-600">
             <Link href="/">Home</Link>
+            <Link href="/blog">blog</Link>
             <Link href="/about">About</Link>
             <Link href="/services">Services</Link>
             <Link href="/products">Products</Link>

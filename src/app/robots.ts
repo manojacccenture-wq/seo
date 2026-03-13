@@ -1,13 +1,20 @@
-import { siteConfig } from "../lib/seo/seo.config";
+import { MetadataRoute } from "next";
 
-export default function robots() {
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = `${process.env.NEXT_PUBLIC_SITE_URL!}`;
   return {
     rules: [
       {
         userAgent: "*",
-        allow: "/"
-      }
+        allow: "/",
+        disallow: [ "/api/"],
+      },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: ["/terms-and-conditions/"],
+      },
     ],
-    sitemap: `${siteConfig.siteUrl}/sitemap.xml`
-  }
+    sitemap: `${baseUrl}/sitemap.xml`,
+  };
 }

@@ -28,7 +28,7 @@ export default function Home() {
       <IndustryBlock
         title="Steel & Manufacturing"
         description="High volume production environments"
-        image="/industry1.png"
+        image="/og-image.png"
         items={[
           "SAP integrated MIS",
           "production monitoring platforms",
@@ -42,7 +42,7 @@ export default function Home() {
         reverse
         title="Utilities & Infrastructure"
         description="Operational continuity is mandatory"
-        image="/industry2.png"
+        image="/og-image.png"
         items={[
           "IoT device integration",
           "field asset monitoring",
@@ -55,7 +55,7 @@ export default function Home() {
       <IndustryBlock
         title="Commercial Food Courts"
         description="Multi vendor food environment"
-        image="/industry3.png"
+        image="/og-image.png"
         items={[
           "POS platform",
           "inventory management",

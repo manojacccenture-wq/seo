@@ -1,4 +1,4 @@
-import { generateSEO } from "@/src/lib/seo/generateMetadata"
+import { generateSEO } from "../../../lib/seo/generateMetadata"
 
 
 export const metadata = generateSEO({

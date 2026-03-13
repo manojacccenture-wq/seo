@@ -1,24 +1,34 @@
+import { MetadataRoute } from "next";
 import { siteConfig } from "../lib/seo/seo.config";
 
-export default function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = siteConfig.siteUrl;
   return [
     {
-      url: `${siteConfig.siteUrl}`,
-      lastModified: new Date()
+      url: `${baseUrl}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
     },
     {
-      
-      url: `${siteConfig.siteUrl}/about`,
-      lastModified: new Date()
+
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      
-      url: `${siteConfig.siteUrl}/services`,
-      lastModified: new Date()
+
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
-      url: `${siteConfig.siteUrl}/products`,
-      lastModified: new Date()
+      url: `${baseUrl}/products`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     }
   ]
 }
